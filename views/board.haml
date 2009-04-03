@@ -1,0 +1,8 @@
+%table.board
+  - 9.times do |y|
+    %tr
+      - 9.times do |x|
+        -if @board[y][x] then
+          %td.known&= @board[y][x].to_s
+        -else
+          %td
